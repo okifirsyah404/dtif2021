@@ -535,6 +535,7 @@ public class CheckoutTransaksi extends javax.swing.JFrame {
             JasperViewer.viewReport(jp, false);
 
 
+
         } catch (Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -575,6 +576,8 @@ public class CheckoutTransaksi extends javax.swing.JFrame {
             }
         });
     }
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btnBack;

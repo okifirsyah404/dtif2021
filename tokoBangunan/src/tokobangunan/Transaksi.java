@@ -19,6 +19,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
+import jdk.nashorn.internal.scripts.JO;
 import tokobangunan.Components.RoundJTextField;
 import tokobangunan.Components.RoundedPanel;
 /**
@@ -701,6 +702,7 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
     
     private void btnNextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNextMouseClicked
         // TODO add your handling code here:
+
         String nama = this.namaKaryawan.getText();
         int totalBayar = Integer.parseInt(totalField.getText());
         int bayar = Integer.parseInt(payField.getText());
@@ -845,22 +847,33 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
         String qty = kuantitasItemField.getText();
 
 
-            try {
-                String sql = "SELECT * FROM `barang` WHERE kd_barang = '"+ kodeItem +"';";
-                Connection c = (Connection) Config.configDB();
-                Statement st = c.createStatement();
-                ResultSet rs = st.executeQuery(sql);
-                if(rs.next()){
-                    int kuantitas = Integer.parseInt(qty);
-                    int stock = Integer.parseInt(rs.getString("stock"));
-                    if (kuantitas <= stock){
-                        tambahTransaksi();
+        if (qty != null && !qty.equals("")){
+            int kuantitas = Integer.parseInt(qty);
+            if (kuantitas > 0){
+                try {
+                    String sql = "SELECT * FROM `barang` WHERE kd_barang = '"+ kodeItem +"';";
+                    Connection c = (Connection) Config.configDB();
+                    Statement st = c.createStatement();
+                    ResultSet rs = st.executeQuery(sql);
+                    if(rs.next()){
+                        int stock = Integer.parseInt(rs.getString("stock"));
+                        if (kuantitas <= stock){
+                            tambahTransaksi();
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null, "Stok tidak cukup");
+                        }
                     }
-                    else {
-                        JOptionPane.showMessageDialog(null, "Stok tidak cukup");
-                    }
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
                 }
-            } catch (Exception e) {}
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Masukkan kuantitas dengan benar");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Masukkan kuantitas barang");
+        }
 
 
     }//GEN-LAST:event_btnEnterMouseClicked
