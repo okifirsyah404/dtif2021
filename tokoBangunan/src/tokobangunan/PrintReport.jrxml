@@ -69,28 +69,28 @@ FROM detail_transaksi JOIN transaksi ON detail_transaksi.kd_transaksi = transaks
 				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="60" width="100" height="20"/>
+				<reportElement x="0" y="60" width="65" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
 				<text><![CDATA[Kode Item]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="111" y="60" width="100" height="20"/>
+				<reportElement x="77" y="60" width="198" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
 				<text><![CDATA[Item]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="224" y="60" width="100" height="20"/>
+				<reportElement x="286" y="60" width="83" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
 				<text><![CDATA[Harga]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="336" y="60" width="100" height="20"/>
+				<reportElement x="380" y="60" width="56" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 				</textElement>
@@ -113,9 +113,9 @@ FROM detail_transaksi JOIN transaksi ON detail_transaksi.kd_transaksi = transaks
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="25" splitType="Stretch">
+		<band height="41" splitType="Stretch">
 			<textField>
-				<reportElement positionType="Float" x="0" y="0" width="100" height="20"/>
+				<reportElement positionType="Float" x="0" y="0" width="65" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 					<paragraph tabStopWidth="5"/>
@@ -123,7 +123,7 @@ FROM detail_transaksi JOIN transaksi ON detail_transaksi.kd_transaksi = transaks
 				<textFieldExpression><![CDATA[$F{kd_barang}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="111" y="0" width="100" height="20"/>
+				<reportElement positionType="Float" x="77" y="0" width="198" height="41"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 					<paragraph tabStopWidth="5"/>
@@ -131,7 +131,7 @@ FROM detail_transaksi JOIN transaksi ON detail_transaksi.kd_transaksi = transaks
 				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="224" y="0" width="100" height="20"/>
+				<reportElement positionType="Float" x="286" y="0" width="83" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 					<paragraph tabStopWidth="5"/>
@@ -139,7 +139,7 @@ FROM detail_transaksi JOIN transaksi ON detail_transaksi.kd_transaksi = transaks
 				<textFieldExpression><![CDATA[$F{harga_satuan}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="336" y="0" width="100" height="20"/>
+				<reportElement positionType="Float" x="380" y="0" width="56" height="20"/>
 				<textElement>
 					<font fontName="Serif" size="14"/>
 					<paragraph tabStopWidth="5"/>

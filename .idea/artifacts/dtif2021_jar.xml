@@ -1,8 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="CrafterPos:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/CrafterPos_jar</output-path>
+  <artifact type="jar" name="dtif2021:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dtif2021_jar</output-path>
     <root id="archive" name="dtif2021.jar">
       <element id="module-output" name="dtif2021" />
+      <element id="extracted-dir" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.27.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/barbecue-1.5-beta1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/cglib-2.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/commons-beanutils-1.8.2.jar" path-in-jar="/" />
@@ -31,7 +32,7 @@
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/poi-ooxml-3.10.1-20140818.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/poi-ooxml-schemas-3.10.1-20140818.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/xmlbeans-2.6.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.27.jar" path-in-jar="/" />
+      <element id="file-copy" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.27.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/barbecue-1.5-beta1.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/cglib-2.1.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/commons-beanutils-1.8.2.jar" />
@@ -60,7 +61,6 @@
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/poi-ooxml-3.10.1-20140818.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/poi-ooxml-schemas-3.10.1-20140818.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/PLUGIN &amp; LIBRARY IREPORT/PLUGIN &amp; LIBRARY IREPORT/LIBRARY IREPORT/xmlbeans-2.6.0.jar" />
-      <element id="file-copy" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.27.jar" />
     </root>
   </artifact>
 </component>

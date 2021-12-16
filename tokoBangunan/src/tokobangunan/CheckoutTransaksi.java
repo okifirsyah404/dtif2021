@@ -97,6 +97,7 @@ public class CheckoutTransaksi extends javax.swing.JFrame {
         btnPrint = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CrafterPOS");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1360, 760));
@@ -533,9 +534,6 @@ public class CheckoutTransaksi extends javax.swing.JFrame {
 
             JasperPrint jp = JasperFillManager.fillReport(report, kode, conn);
             JasperViewer.viewReport(jp, false);
-
-
-
         } catch (Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());

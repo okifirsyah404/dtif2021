@@ -49,7 +49,12 @@ public class Transaksi extends javax.swing.JFrame {
         int bayar = Integer.parseInt(payField.getText());
 
         int kembalian = bayar - total;
-        changeField.setText(String.valueOf(kembalian));
+        if (kembalian >= 0){
+            changeField.setText(String.valueOf(kembalian));
+        } else {
+            changeField.setText(String.valueOf("0"));
+        }
+
     }
 
     private void autonumber(){
@@ -231,6 +236,8 @@ public class Transaksi extends javax.swing.JFrame {
         btnNext = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CrafterPOS");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1360, 868));
@@ -668,6 +675,8 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
     );
 
+    getAccessibleContext().setAccessibleName("CrafterPOS");
+
     pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -897,7 +906,7 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
     private void namaItemFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_namaItemFieldKeyReleased
         String namaItem = namaItemField.getText();
         try {
-            String sql = "SELECT * FROM `barang` WHERE nama_barang = '"+ namaItem +"';";
+            String sql = "SELECT * FROM `barang` WHERE nama_barang LIKE '%"+ namaItem +"%';";
             Connection c = (Connection) Config.configDB();
             Statement st = c.createStatement();
             ResultSet rs = st.executeQuery(sql);
