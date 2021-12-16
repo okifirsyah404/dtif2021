@@ -67,7 +67,8 @@ public class RiwayatTransaksi extends javax.swing.JFrame {
 
         try {
             Statement st = (Statement) Config.configDB().createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM `detail_transaksi` WHERE kd_transaksi = '"+ kdTransaksi +"';");
+            ResultSet rs = st.executeQuery("SELECT * FROM `detail_transaksi` JOIN transaksi ON detail_transaksi" +
+                    ".kd_transaksi = transaksi.kd_transaksi WHERE transaksi.kd_transaksi = '"+ kdTransaksi +"';");
 
             while (rs.next()) {
                 tblDetail.addRow(new Object[] {

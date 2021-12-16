@@ -738,9 +738,10 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
 
             try {
                 Connection c = (Connection) Config.configDB();
-                String sql = "INSERT INTO `transaksi`(`kd_transaksi`, `tanggal`, `nama`, `harga_total`, `tunai`, " +
-                        "`kembali`) " +
-                        "VALUES ('"+ idTransaksi +"','"+ waktu +"','" + namaKar +"','"+ grandTotal +"','"+ tunai +"', " +
+
+                String sql = "INSERT INTO `transaksi`(`kd_transaksi`, `tanggal`, `kd_profil`, `nama`, `harga_total`, " +
+                        "`tunai`, `kembali`) " +
+                        "VALUES ('"+ idTransaksi +"','"+ waktu +"','"+ kodeProfileKaryawan +"','"+ namaKar +"','"+ grandTotal +"','"+ tunai +"'," +
                         "'"+ kembalian +"')";
                 PreparedStatement p = c.prepareStatement(sql);
                 p.executeUpdate();
@@ -763,10 +764,10 @@ btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
                     row[5] = model.getValueAt(i, 5);
                     modelNota.addRow(row);
 
-                    String sql = "INSERT INTO `detail_transaksi`(`kd_transaksi`, `nama`, `kd_barang`, `nama_barang`, `kuantitas`, `harga_satuan`, `harga_total`, `kd_profil`) " +
-                            "VALUES ('"+ idTransaksi +"','" + namaKar +"','"+ transactionTable.getValueAt(i, 1) +"'," +
+                    String sql = "INSERT INTO `detail_transaksi`(`kd_transaksi`, `kd_barang`, `nama_barang`, `kuantitas`, `harga_satuan`, `harga_total`) " +
+                            "VALUES ('"+ idTransaksi +"','"+ transactionTable.getValueAt(i, 1) +"'," +
                             "'"+transactionTable.getValueAt(i, 2)+"', '"+transactionTable.getValueAt(i, 4)+"', '"+transactionTable.getValueAt(i, 3)+"', '"
-                            +transactionTable.getValueAt(i, 5)+"', '"+ kodeProfileKaryawan +"')";
+                            +transactionTable.getValueAt(i, 5)+"')";
                     PreparedStatement p = c.prepareStatement(sql);
                     p.executeUpdate();
                     p.close();
