@@ -1,2 +1,3 @@
-# dtif2021
+# CrafterPOS
+
 Tugas semester 1
